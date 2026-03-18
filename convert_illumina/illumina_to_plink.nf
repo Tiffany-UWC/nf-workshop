@@ -18,23 +18,9 @@ process illuminaToPlink {
     """
 }
 
-process basicQC {
-    publishDir "${params.output_dir}"
-
-    input: 
-    path(converted_raw)
-
-    output:
-    path("${converted_raw.baseName}*") 
-
-    """
-    QC_script.sh
-    """
-}
-
-
 // Workflows connect channels to processes
 workflow {
     illuminaToPlink(input_ch)
-    basicQC(illuminaToPlink.out)
 }
+
+

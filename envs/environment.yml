@@ -1,0 +1,14 @@
+name: nf-env
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+  - https://repo.anaconda.com/pkgs/main
+  - https://repo.anaconda.com/pkgs/r
+dependencies:
+  - nextflow
+  - plink
+  - bcftools
+  - r-base=4.3
+  - r-tidyverse
+prefix: /home/ubuntu_workspace/miniconda3/envs/nf-env

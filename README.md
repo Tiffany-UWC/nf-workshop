@@ -30,7 +30,7 @@ Process: Conducting qc (sample/SNP missingness, heterozygosity checks, MAF, HWE,
 Output: FinalReport files passing QC
 
 ## Pipeline for QC adapted from:
-https://github.com/huw-morris-lab/snp-array-QC
+https://github.com/MareesAT/GWA_tutorial/
 
 ## Example of usage on local machine: 
 nextflow run <script_name.nf>

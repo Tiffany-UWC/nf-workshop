@@ -12,4 +12,4 @@ nextflow run main.nf
 
 ## Example of usage on HPC:
 module load nextflow
-nextflow run main.nf -c beta.config -profile slurm
+nextflow run main.nf -profile slurm

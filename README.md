@@ -1,17 +1,15 @@
 # Nextflow tutorial working example
 
-This repo is for deploying an example of a workflow with nextflow. 
+This repo displays an example of a workflow with nextflow- including conversion of a GenomeStudio illumina report, basic quality control, and then visualisation of the results
 
-## Defining parameters: 
-Input: FinalReport.txt (GenomeStudio illumine report containing 10 random samples from the VCAMM study genotype dataset). 
+## Workflow structure:
+1. Conversion of illumina FinalReport.txt to plink compatible files - Rscript (.lgen/.fam/.map)
+2. Basic QC (SNP and sample missingness, HWE, MAF, etc.) - Plink v1.9
+3. Visualisation of QC filtering outputs - R 
 
-Process: Converting illumina final report txt format to lgen format for plink 
-Usage in CLI: Rscript illumina_finalreport_to_plink.r --report FinalReport.txt --out <define output file name>
-
-Output: <output name>.lgen/.fam/.map
-
-Rscript adapted from
-https://github.com/Broccolito/illumina_finalreport_to_plink
-
-## Usage in Nextflow: 
+## Example of usage on local machine: 
 nextflow run main.nf
+
+## Example of usage on HPC:
+module load nextflow
+nextflow run main.nf -c beta.config -profile slurm

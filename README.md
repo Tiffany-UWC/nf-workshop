@@ -32,7 +32,7 @@ Output: FinalReport files passing QC
 ## Pipeline for QC adapted from:
 https://github.com/MareesAT/GWA_tutorial/
 
-## Example of usage on local machine: 
+# Example of usage on local machine: 
 nextflow run <script_name.nf>
 
 ## Example of usage on HPC:

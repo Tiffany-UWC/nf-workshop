@@ -1,6 +1,6 @@
 # Prepare data before use:
 
-## 1. unzip FinalReport.zip
+## 1. Unzip FinalReport.zip
 ```{bash}
 unzip FinalReport.zip
 ```

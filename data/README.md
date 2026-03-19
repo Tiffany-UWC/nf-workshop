@@ -8,6 +8,9 @@ unzip FinalReport.zip
 ## 2. Download and prepare HGDP-CEPH reference files:
 Reference files found here: https://www.cog-genomics.org/plink/2.0/resources
 ```{bash}
+# Move to data/hgdp-ref directory
+cd hgdp-ref
+
 # Download files from links.txt file
 wget -i hgdp_links.txt
 

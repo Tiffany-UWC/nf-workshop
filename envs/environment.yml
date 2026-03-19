@@ -10,6 +10,9 @@ dependencies:
   - plink
   - plink2
   - bcftools
+  - eigensoft    
+  - matplotlib            
   - r-base=4.3
   - r-tidyverse
 prefix: /home/ubuntu_workspace/miniconda3/envs/nf-env
+

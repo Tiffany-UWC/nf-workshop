@@ -8,6 +8,7 @@ channels:
 dependencies:
   - nextflow
   - plink
+  - plink2
   - bcftools
   - r-base=4.3
   - r-tidyverse

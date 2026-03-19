@@ -2,16 +2,16 @@
 nextflow.enable.dsl=2
 
 // Channel directing the raw data as input
-input_ch = Channel.fromPath("${params.input_dir}/${params.input_file}")
+qc_input_ch = Channel.fromPath("${params.output_dir_convert}/${params.input_qc}")
 
 process basicQC {
-    publishDir "${params.output_dir}"
+    publishDir "${params.output_dir_qc}"
 
     input: 
-    path(converted_raw)
+    path(qc_files)
 
     output:
-    path("${converted_raw.baseName}*") 
+    path("${qc_files.baseName}*") 
 
     """
     QC_script.sh
@@ -20,5 +20,5 @@ process basicQC {
 
 // Workflows connect channels to processes
 workflow {
-    basicQC(illuminaToPlink.out)
+    basicQC(qc_input_ch)
 }

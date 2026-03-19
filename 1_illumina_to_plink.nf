@@ -2,10 +2,10 @@
 nextflow.enable.dsl=2
 
 // Channel directing the raw data as input
-input_ch = Channel.fromPath("${params.input_dir}/${params.input_file}")
+convert_input_ch = Channel.fromPath("${params.input_dir_convert}/${params.input_file_report}")
 
 process illuminaToPlink {
-    publishDir "${params.output_dir}", mode: 'copy'
+    publishDir "${params.output_dir_convert}", mode: 'copy'
 
     input:
     path(file_report)
@@ -20,7 +20,5 @@ process illuminaToPlink {
 
 // Workflows connect channels to processes
 workflow {
-    illuminaToPlink(input_ch)
+    illuminaToPlink(convert_input_ch)
 }
-
-

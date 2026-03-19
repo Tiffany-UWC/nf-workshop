@@ -11,7 +11,6 @@ This repo displays an example of a workflow with nextflow- including conversion 
 
 ## Defining parameters: 
 Input: FinalReport.txt (GenomeStudio illumina report containing 10 random samples from the study genotype dataset). 
-(unzip before use)
 
 Process: Converting illumina final report txt format to lgen format for plink 
 Usage in CLI: Rscript illumina_finalreport_to_plink.r --report <report_name>.txt --out <output_file_name>
